@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "hello-grpc/";
+
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  bytes data = 1;
+}
+
+message HelloReply {
+  bytes data = 1;
+}

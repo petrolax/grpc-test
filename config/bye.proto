@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "bye-grpc/";
+
+service ByeService {
+  rpc SayBye(ByeRequest) returns (ByeReply) {}
+}
+
+message ByeRequest {
+  bytes data = 1;
+}
+
+message ByeReply {
+  bytes data = 1;
+}
